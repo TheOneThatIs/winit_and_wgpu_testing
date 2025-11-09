@@ -1,6 +1,13 @@
 [package]
-name = "sdl_and_wgpu_testing"
+name = "winit_and_wgpu_testing"
 version = "0.1.0"
 edition = "2024"
 
+[profile.release]
+strip = true
+
 [dependencies]
+winit = "0.30.12"
+env_logger = "0.11.8"
+wgpu = { version = "27.0.0", features = ["webgl"]}
+pollster = "0.4.0"
